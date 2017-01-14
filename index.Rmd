@@ -1,0 +1,115 @@
+---
+title: "learn slidify"
+author: "rocket-liu"
+highlighter: highlight.js
+output: pdf_document
+job: null
+knit: slidify::knit2slides
+mode: selfcontained
+hitheme: tomorrow
+subtitle: a simple introduction to slidify
+framework: revealjs
+widgets: [mathjax]
+---
+
+## framework  reveal.js  impress.js
+framework   : revealjs
+framework   : impressjs
+
+## 3 basic points
+
+1. Edit YAML front matter
+2. Write using R Markdown,Rmd docments
+3. Use an empty line followed by three dashes to separate slides!
+
+
+--- .class #id 
+## this is the second title
+### this is the three title
+you can test every markdown docment here
+$$r_t=\beta a$$
+
+
+---
+
+## > mark
+>test the result of mark ">"
+
+
+---
+## link
+http://www.kaggle.com/c/amazon-employee-access-challenge 
+
+
+---
+### the table
+Column Name | Description
+---|---
+ACTION | ACTION is 1 if the resource was approved, 0 if the resource was not
+RESOURCE | An ID for each resource
+MGR_ID | The EMPLOYEE ID of the manager of the current EMPLOYEE ID record
+ROLE_ROLLUP_1 | Company role grouping category id 1 (e.g. US Engineering)
+
+---
+### use `` to highlight
+`python` is  good
+
+---
+### code
+```{r}
+(t <- data.frame(true_label=c(0,0,0,0,1,1,1,1),
+                   predict_1=c(1,2,3,4,5,6,7,8),
+                   predict_2=c(1,2,3,6,5,4,7,8),
+                   predict_3=c(1,7,6,4,5,3,2,8)))
+```
+
+
+---
+### print code and result
+```{r}
+a <- c(1:10)
+sum(a)
+```
+
+
+---
+### hide code print result
+```{r, echo=FALSE}
+a <- c(1:10)
+sum(a)
+```
+
+---
+### hide result print code
+```{r, echo=TRUE, results="hide"}
+a <- c(1:10)
+sum(a)
+```
+
+
+---
+*** up
+```{r, tidy=FALSE}
+data.frame(true_label=t$true_label, 
+           predict_2=t$predict_2, 
+           predict_label=(t$predict_2>=6))
+```
+
+*** down
+```{r}
+table(t$predict_2>=6, t$true_label)
+```
+
+
+---
+## Question 1
+What is 1 + 1?
+1. 1
+2. 2
+3. 3
+4. 4
+***.hint This is a hint
+***.explanation This is an explanation
+
+
+

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>learn slidify</title>
+  <meta name="description" content="">
+  <meta name="author" content="rocket-liu">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>framework  reveal.js  impress.js</h2>
+  <p>framework   : revealjs
+framework   : impressjs</p>
+
+<h2>3 basic points</h2>
+
+<ol>
+<li>Edit YAML front matter</li>
+<li>Write using R Markdown,Rmd docments</li>
+<li>Use an empty line followed by three dashes to separate slides!</li>
+</ol>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>this is the second title</h2>
+  <h3>this is the three title</h3>
+
+<p>you can test every markdown docment here
+\[r_t=\beta a\]</p>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>&gt; mark</h2>
+  <blockquote>
+<p>test the result of mark &quot;&gt;&quot;</p>
+</blockquote>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>link</h2>
+  <p><a href="http://www.kaggle.com/c/amazon-employee-access-challenge">http://www.kaggle.com/c/amazon-employee-access-challenge</a> </p>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h3>the table</h3>
+  <table><thead>
+<tr>
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACTION</td>
+<td>ACTION is 1 if the resource was approved, 0 if the resource was not</td>
+</tr>
+<tr>
+<td>RESOURCE</td>
+<td>An ID for each resource</td>
+</tr>
+<tr>
+<td>MGR_ID</td>
+<td>The EMPLOYEE ID of the manager of the current EMPLOYEE ID record</td>
+</tr>
+<tr>
+<td>ROLE_ROLLUP_1</td>
+<td>Company role grouping category id 1 (e.g. US Engineering)</td>
+</tr>
+</tbody></table>
+
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h3>use `` to highlight</h3>
+  <p><code>python</code> is  good</p>
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h3>code</h3>
+  <pre><code class="r">(t &lt;- data.frame(true_label=c(0,0,0,0,1,1,1,1),
+                   predict_1=c(1,2,3,4,5,6,7,8),
+                   predict_2=c(1,2,3,6,5,4,7,8),
+                   predict_3=c(1,7,6,4,5,3,2,8)))
+</code></pre>
+
+<pre><code>##   true_label predict_1 predict_2 predict_3
+## 1          0         1         1         1
+## 2          0         2         2         7
+## 3          0         3         3         6
+## 4          0         4         6         4
+## 5          1         5         5         5
+## 6          1         6         4         3
+## 7          1         7         7         2
+## 8          1         8         8         8
+</code></pre>
+
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h3>print code and result</h3>
+  <pre><code class="r">a &lt;- c(1:10)
+sum(a)
+</code></pre>
+
+<pre><code>## [1] 55
+</code></pre>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h3>hide code print result</h3>
+  <pre><code>## [1] 55
+</code></pre>
+
+</section>
+<section class='' data-state='' id='slide-10'>
+  <h3>hide result print code</h3>
+  <pre><code class="r">a &lt;- c(1:10)
+sum(a)
+</code></pre>
+
+</section>
+<section class='' data-state='' id='slide-11'>
+  
+  
+</section>
+<section class='' data-state='' id='slide-12'>
+  <h2>Question 1</h2>
+  <p>What is 1 + 1?
+1. 1
+2. 2
+3. 3
+4. 4</p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
